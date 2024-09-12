@@ -8,8 +8,11 @@ import {
   Image,
   Animated,
   PanResponder,
+  StatusBar,
 } from 'react-native';
 import { COLORS } from '../../Theme/Colors';
+import { moderateScale, scale } from '../../utils/Scaling';
+import { green } from 'react-native-reanimated/lib/typescript/Colors';
 
 export default function Images() {
   const [modalVisible, setModalVisible] = useState(false);
@@ -83,15 +86,16 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center', 
+    backgroundColor:COLORS.White
   },
   button: {
-    padding: 10,
+    padding:scale (10),
     backgroundColor: COLORS.green,
-    borderRadius: 5,
+    borderRadius:moderateScale (5),
   },
   buttonText: {
     color: 'white',
-    fontSize: 16,
+    fontSize:moderateScale (16),
   },
   modalContainer: {
     flex: 1,
@@ -102,22 +106,22 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '80%',
     backgroundColor: 'white',
-    padding: 20,
+    padding:scale (20),
     alignItems: 'center',
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    borderTopLeftRadius:moderateScale (20),
+    borderTopRightRadius:moderateScale (20),
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 2,
     },
     shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
+    shadowRadius:scale (4),
+    elevation:scale (5),
   },
   imageContainer: {
-    width: 200,
-    height: 200,
+    width:scale (200),
+    height:scale (200),
     overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
@@ -128,14 +132,14 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   closeButton: {
-    padding: 10,
+    padding:scale (10),
     backgroundColor: 'red',
-    borderRadius: 5,
+    borderRadius:moderateScale (5),
     position: 'absolute',
-    bottom: 30,
+    bottom:scale (30),
   },
   closeButtonText: {
     color: 'white',
-    fontSize: 16,
+    fontSize:moderateScale (16),
   },
 });

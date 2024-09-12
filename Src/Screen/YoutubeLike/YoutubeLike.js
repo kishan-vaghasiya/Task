@@ -9,7 +9,7 @@ import {
   Easing,
 } from 'react-native';
 import Modal from 'react-native-modal';
-import { scale,verticalScale,moderateScale } from '../../utils/Scaling';
+import {scale, verticalScale, moderateScale} from '../../utils/Scaling';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const YoutubeLike = () => {
@@ -55,7 +55,7 @@ const YoutubeLike = () => {
       <Image
         style={styles.post}
         source={{
-          uri: 'https://th.bing.com/th/id/OIF.CQ7f8THj9VChh6xRZeLbIA?w=252&h=180&c=7&r=0&o=5&pid=1.7',
+          uri: 'https://i.ytimg.com/vi/eZOdsCp3c_Y/maxresdefault.jpg',
         }}
       />
       <TouchableOpacity onPress={toggleModal}>
